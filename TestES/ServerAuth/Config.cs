@@ -15,7 +15,8 @@ namespace ServerAuth
         public static IEnumerable<ApiScope> ApiScopes =>
         new List<ApiScope>                          // <-- Recursos/APIs que desejamos proteger 
         {
-            new ApiScope("api01", "My API")
+            new ApiScope("api01", "My API"),
+            new ApiScope("api02", "My API02")
         };
 
         public static IEnumerable<Client> Clients =>
@@ -29,7 +30,7 @@ namespace ServerAuth
                     {
                         new Secret("secret".Sha256())
                     },
-                    AllowedScopes = { "api01" }     // <-- Recursos/APIs ao qual este cliente terá acesso
+                    AllowedScopes = { "api01", "api02" }     // <-- Recursos/APIs ao qual este cliente terá acesso
                 }
            };
 
@@ -40,13 +41,13 @@ namespace ServerAuth
                 {
                     SubjectId = "1",
                     Username = "alice",
-                    Password = "password"
+                    Password = "1234"
                 },
                 new TestUser
                 {
                     SubjectId = "2",
                     Username = "bob",
-                    Password = "password"
+                    Password = "123456"
                 }
             };
 

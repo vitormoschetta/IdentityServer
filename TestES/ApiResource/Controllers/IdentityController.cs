@@ -10,7 +10,7 @@ namespace ApiResource.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    [Authorize]
+    [Authorize(Policy = "AppsProtected")]
     public class IdentityController : ControllerBase
     {
         [HttpGet]

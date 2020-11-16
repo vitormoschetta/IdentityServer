@@ -1,4 +1,5 @@
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using IdentityModel.Client;
 using Microsoft.AspNetCore.Mvc;
@@ -19,8 +20,7 @@ namespace AppClient.Controllers
             {
                 Address = disco.TokenEndpoint,
                 ClientId = "client",
-                ClientSecret = "secret",
-                Scope = "api01"
+                ClientSecret = "secret",                 
             });
 
             if (tokenResponse.IsError)
@@ -31,7 +31,8 @@ namespace AppClient.Controllers
 
             // call api
             var apiClient = new HttpClient();
-            apiClient.SetBearerToken(tokenResponse.AccessToken);
+            apiClient.SetBearerToken(tokenResponse.AccessToken);            
+
 
             var response = await apiClient.GetAsync("https://localhost:6001/Public"); // app resource
             if (!response.IsSuccessStatusCode)

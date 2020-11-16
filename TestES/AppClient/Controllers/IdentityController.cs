@@ -1,4 +1,5 @@
 using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using IdentityModel.Client;
 using Microsoft.AspNetCore.Mvc;
@@ -29,7 +30,10 @@ namespace AppClient.Controllers
                 Address = disco.TokenEndpoint,
                 ClientId = "client",
                 ClientSecret = "secret",
-                Scope = "api01"
+
+                // Lá no Identity Server o 'client' tem acesso as APIs: 'api01' e 'api02'.
+                // Podemos, porém, limitar o escopo de acesso desse client à api01:
+                //Scope = "api01"                  
             });
 
             if (tokenResponse.IsError)
@@ -40,7 +44,7 @@ namespace AppClient.Controllers
 
             // call api
             var apiClient = new HttpClient();
-            apiClient.SetBearerToken(tokenResponse.AccessToken);
+            apiClient.SetBearerToken(tokenResponse.AccessToken);            
 
             var response = await apiClient.GetAsync("https://localhost:6001/Identity"); // app resource
             if (!response.IsSuccessStatusCode)
