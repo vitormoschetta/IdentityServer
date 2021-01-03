@@ -1,3 +1,7 @@
+# Single Sign-on 
+Esquema de autenticação que permite ao usuário compartilhar credenciais de acesso de uma aplicação para diversas aplicações. 
+
+
 # IdentityServer
 
 Endpoint para consultar configurações identity server:
