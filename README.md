@@ -7,7 +7,15 @@ Esquema de autenticação/login que permite ao usuário compartilhar credenciais
 Processo de login através de um provedor externo. Ex: Logar com suas redes sociais ou conta do Google.
 
 ### Single Sign-Out
-Logout/sair de todas as aplicações, ou seja, logout integrado.
+Logout/sair de todas as aplicações, ou seja, logout integrado..
+
+## IdentityServer vs AspNetIdentity
+O IdentyServer controla o acesso as APIs e o AspNetIdentity é para gerenciar os usuários.
+
+Com o IdentityServer podemos controlar/determinar a quais APIs um determinado usuário/cliente/app poderá acessar, através de seus escopos informados em um Jason Web Token (JWT).
+
+
+
 
 # IdentityServer
 
@@ -16,6 +24,4 @@ Endpoint para consultar configurações identity server:
 https://localhost:5001/.well-known/openid-configuration
 
 
-## O que o IdentityServer nos Oferece que o Identity não faz?
-
-O Identityserver nos possibilita controlar não só a autenticação e autorização, mas também controlar/determinar a quais APIs um determinado usuário poderá acessar. 
+ 
