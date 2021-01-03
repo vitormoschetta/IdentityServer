@@ -1,7 +1,9 @@
 # Conceitos
 
-### Single Sign-On 
-Esquema de autenticação/login que permite ao usuário compartilhar credenciais de acesso de uma aplicação com diversas outras aplicações. 
+IdentityServer4 é um esquema de autenticação duqe implementa os padrões OAuth2.0 e OpenId Connect.
+
+### Single Sign-On (SSO)
+Esquema de autenticação/login que permite ao usuário compartilhar credenciais de acesso de uma aplicação com diversas outras aplicações. Esse é o conceito de um SSO.
 
 ### Federation Gateway
 Processo de login através de um provedor externo. Ex: Logar com suas redes sociais ou conta do Google.
@@ -13,7 +15,6 @@ Logout/sair de todas as aplicações, ou seja, logout integrado..
 O IdentyServer controla o acesso as APIs e o AspNetIdentity é para gerenciar os usuários.
 
 Com o IdentityServer podemos controlar/determinar a quais APIs um determinado usuário/cliente/app poderá acessar, através de seus escopos informados em um Jason Web Token (JWT).
-
 
 
 
