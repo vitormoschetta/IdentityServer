@@ -7,7 +7,7 @@ Esquema de autenticação/login que permite ao usuário compartilhar credenciais
 Processo de login através de um provedor externo. Ex: Logar com suas redes sociais ou conta do Google.
 
 ### Single Sign-Out
-Logout/sair de todas as aplicações vinculadas em apenas um logout.
+Logout/sair de todas as aplicações, ou seja, logout integrado.
 
 # IdentityServer
 
