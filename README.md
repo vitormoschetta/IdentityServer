@@ -11,10 +11,25 @@ Processo de login através de um provedor externo. Ex: Logar com suas redes soci
 ### Single Sign-Out
 Logout/sair de todas as aplicações, ou seja, logout integrado..
 
-## IdentityServer vs AspNetIdentity
+### IdentityServer vs AspNetIdentity
 O IdentyServer controla o acesso as APIs e o AspNetIdentity é para gerenciar os usuários.
 
 Com o IdentityServer podemos controlar/determinar a quais APIs um determinado usuário/cliente/app poderá acessar, através de seus escopos informados em um Jason Web Token (JWT).
+
+
+# Papeis / Atores
+#### Resource Owner 
+Dono do Recurso / Usuário
+
+#### Client
+Aplicação que consome o Recurso.
+
+#### Resource Server
+Conteúdo 
+
+#### Authorization Server
+Servidor de Autorização OAuth
+
 
 
 
