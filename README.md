@@ -1,7 +1,9 @@
-# Single Sign-on 
+# Conceitos
+
+### Single Sign-on 
 Esquema de autenticação que permite ao usuário compartilhar credenciais de acesso de uma aplicação com diversas outras aplicações. 
 
-# Federation Gateway
+### Federation Gateway
 Processo de login através de um provedor externo. Ex: Logar com suas redes sociais ou conta do Google.
 
 
