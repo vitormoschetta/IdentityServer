@@ -1,14 +1,9 @@
 # Conceitos
 
+É necessário, primeiramente, entender um conceito básico sobre Cookie, Session e JWT. Você pode ler esta breve introdução [Aqui] (https://github.com/vitormoschetta/Help-AutenticacaoAutorizacao).
+
+
 IdentityServer4 é um esquema de autenticação que implementa os padrões OAuth2.0 e OpenId Connect.
-
-
-### OpenId Connect 
-O protocolo de autenticação OpenID tem como finalidade permitir que os usuários sejam autenticados por sites cooperantes (conhecidos como partes confiáveis ou RP) usando um serviço de autorização de terceiros.  
-Isso elimina a necessidade de aplicativos web e aplicativos nativos ter que fornecer as suas próprias soluções de autenticação.
-
-##### Federation Gateway
-Processo de login através de um provedor externo. Ex: Logar com suas redes sociais ou conta do Google.
 
 
 ### Single Sign-On (SSO)
@@ -34,8 +29,8 @@ O JSON Web Token (JWT) é o Token que acompanha o Bearer. Ele é um padrão aber
 Ele é regido por um conjunto bem definido de instruções tanto para a emissão quanto para validação. O token possui as claims que serão usadas por um client para limitar o acesso do usuário.
 
 
-### JWT vs Cookies (Correto: JWT vs Session)
-#### Cookie
+### JWT vs Cookies (Correto: JWT vs Session) - História
+
 Diferente do LocalStorage e SessionStorage, Cookies podem ser armazenados por tempo indeterminado, permanecendo salvo mesmo ao fechar o browser. Graças aos Cookies podemos salvar nossas crendencias no navegador, e abrir nossas redes sociais no dia seguinte sem precisar informar o login novamente.
 
 Como podemos observar, **Cookies nao estão diretamente ligados à autenticação**, mas na persistência de informações no browser. Acontece que essa capacidade de persistência duradoura do Cookie o associou à **autenticação baseada em Session**.
@@ -55,6 +50,12 @@ Por este motivo foi necessário o desenvolvimento de um outro método de autenti
 A grande questão aqui é: Como saber que este Token que trafega com os dados do Usuário via HTTP é válido? Como os Servidores poderiam validar esta solicitação? 
 
 É aí que entra o **Secret**, a Chave. O JWT é montado (ele não é criptografado, pois é um padrão aberto) a partir das informações/claims do Usuário + sequência de caracteres conhecidos como Secret/Chave. Qualquer um pode decifrar o conteúdo de um JWT, mas apenas quem possui esta Chave pode validá-lo.
+
+Dá-se o início do  **OpenId Connect**, que é a capacidade de permitir que os usuários sejam autenticados por sites cooperantes (conhecidos como partes confiáveis ou RP) usando um serviço de autorização de terceiros.  
+
+Outro conceito que passou a ser muito usado foi o **Federation Gateway**, que é exatamente a capacidade de se efetuar o login através de 
+um provedor externo, como por exemplo, logar com suas redes sociais ou conta do Google.
+
 
 
 ### IdentityServer vs AspNetIdentity
