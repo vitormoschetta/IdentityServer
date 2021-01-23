@@ -38,7 +38,7 @@ Ele é regido por um conjunto bem definido de instruções tanto para a emissão
 #### Cookie
 Diferente do LocalStorage e SessionStorage, Cookies podem ser armazenados por tempo indeterminado, permanecendo salvo mesmo ao fechar o browser. Graças aos Cookies podemos salvar nossas crendencias no navegador, e abrir nossas redes sociais no dia seguinte sem precisar informar o login novamente.
 
-Como podemos observar, __Cookies não servem apenas para autenticação__. Tratando porém de autenticação, o Cookie armazena no cliente/browser o ID de uma Sessão mantida no Server. E é nesta Session que estão as credenciais do Usuário. Perceba que na autenticação com Cookie é necessário manter um estado na memória do Servidor.
+Como podemos observar, _Cookies não servem apenas para autenticação_. Tratando porém de autenticação, o Cookie armazena no cliente/browser o ID de uma Sessão mantida no Server. E é nesta Session que estão as credenciais do Usuário. Perceba que na autenticação com Cookie é necessário manter um estado na memória do Servidor.
 
 O Cookie nasceu para armazenar dados arbitrários, possui um formato de Key-Value que é armazenado no browser e mantido em memória no Server.
 Como o Cookie armazena Possui data de expiração e é vinculado ao domínio. 
