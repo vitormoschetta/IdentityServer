@@ -2,7 +2,9 @@
 
 **IdentityServer4** é um esquema de autenticação que implementa os padrões OAuth2.0 e OpenId Connect.
 
-É necessário, primeiramente, entender um conceito básico sobre Cookie, Session e JWT. Você pode ler esta breve introdução [Aqui](https://github.com/vitormoschetta/Help-AutenticacaoAutorizacao), ela será de suma importância para prosseguir, pois contém conceitos também de **OpenId Connect** e **Federation Gateway**.
+É necessário, primeiramente, entender um conceito básico sobre Cookie, Session e JWT. 
+
+Você pode ler esta breve introdução [Aqui](https://github.com/vitormoschetta/Help-AutenticacaoAutorizacao). Ela será de suma importância para prosseguir, pois contém conceitos também de **OpenId Connect** e **Federation Gateway**.
 
 
 
