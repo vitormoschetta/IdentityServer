@@ -4,7 +4,7 @@
 
 É necessário, primeiramente, entender um conceito básico sobre _Cookie_, _Session_ e _JWT_. 
 
-Você pode ler esta breve introdução **[Aqui]**(https://github.com/vitormoschetta/Help-AutenticacaoAutorizacao). Ela será de suma importância para prosseguir, pois contém conceitos também de **OpenId Connect** e **Federation Gateway**.
+Você pode ler esta breve introdução **[Aqui](https://github.com/vitormoschetta/Help-AutenticacaoAutorizacao)**. Ela será de suma importância para prosseguir, pois contém conceitos também de **OpenId Connect** e **Federation Gateway**.
 
 
 
