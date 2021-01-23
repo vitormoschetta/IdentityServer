@@ -1,6 +1,6 @@
 # Conceitos
 
-É necessário, primeiramente, entender um conceito básico sobre Cookie, Session e JWT. Você pode ler esta breve introdução (https://github.com/vitormoschetta/Help-AutenticacaoAutorizacao)[Aqui].
+É necessário, primeiramente, entender um conceito básico sobre Cookie, Session e JWT. Você pode ler esta breve introdução [Aqui](https://github.com/vitormoschetta/Help-AutenticacaoAutorizacao).
 
 
 IdentityServer4 é um esquema de autenticação que implementa os padrões OAuth2.0 e OpenId Connect.
