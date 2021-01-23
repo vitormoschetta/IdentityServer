@@ -35,7 +35,14 @@ Ele é regido por um conjunto bem definido de instruções tanto para a emissão
 
 
 ### JWT vs Cookies
-O Cookie nasceu para armazenar dados arbitrários, possui um formato de Key-Value e é gerenciado pelo browser. Possui data de expiração e é vinculado ao domínio. Dentro do escopo de autenticação, a função dele é similar ao JWT, porém, possuem casos de uso diferente.
+#### Cookie
+Diferente do LocalStorage e SessionStorage, Cookies podem ser armazenados por tempo indeterminado, permanecendo salvo mesmo ao fechar o browser. Graças aos Cookies podemos salvar nossas crendencias no navegador, e abrir nossas redes sociais no dia seguinte sem precisar informar o login novamente.
+
+Como podemos observar, __Cookies não servem apenas para autenticação__. Tratando porém de autenticação, o Cookie armazena no cliente/browser o ID de uma Sessão mantida no Server. E é nesta Session que estão as credenciais do Usuário. Perceba que na autenticação com Cookie é necessário manter um estado na memória do Servidor.
+
+O Cookie nasceu para armazenar dados arbitrários, possui um formato de Key-Value que é armazenado no browser e mantido em memória no Server.
+Como o Cookie armazena Possui data de expiração e é vinculado ao domínio. 
+Dentro do escopo de autenticação, a função dele é similar ao JWT, porém, possuem casos de uso diferente.
 
 Hoje em dia temos requisitos diferentes como aplicativos híbridos, SPA e Api's. Que podem depender de vários back-ends (divididos em servidores de autenticação de micro-services, bancos de dados, servidores de processamento de imagem, etc.). Nestes tipos de cenários mais elaborados, o cookie vai ser uma má decisão, pois a sessão que obtemos de um servidor não corresponde a outro servidor.
 
